@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PlayerModule } from './players/players.module';
+import { RankingModule } from './ranking/ranking.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { PlayerModule } from './players/players.module';
       synchronize: true, // Uniquement en dev
     }),
     PlayerModule,
+    RankingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
